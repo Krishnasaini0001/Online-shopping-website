@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details — ShopSphere</title>
+<meta name="description" content="View detailed product information, specifications and customer reviews on ShopSphere.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="product-details">
+
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="navbar-logo">Shop<span>Sphere</span></a>
+    <form class="navbar-search-form" id="navbar-search-form" role="search">
+      <input type="text" placeholder="Search products..." aria-label="Search products">
+      <button type="submit" aria-label="Search">🔍</button>
+    </form>
+    <nav class="navbar-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="orders.html">My Orders</a>
+    </nav>
+    <div class="navbar-actions">
+      <button data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <a href="wishlist.html" class="navbar-icon-link" aria-label="Wishlist">♡<span class="navbar-badge" data-wishlist-count>0</span></a>
+      <a href="cart.html" class="navbar-icon-link" aria-label="Cart">🛒<span class="navbar-badge" data-cart-count>0</span></a>
+      <span data-auth-slot></span>
+    </div>
+    <button class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="page-title-bar">
+  <div class="container">
+    <span class="breadcrumb"><a href="index.html">Home</a> / <a href="products.html">Products</a> / <span id="pd-category">Product</span></span>
+  </div>
+</div>
+
+<main class="section" style="padding-top:32px;">
+  <div class="container" id="product-details-root">
+    <div class="pd-layout">
+      <div class="pd-media">
+        <img id="pd-image" src="" alt="">
+        <div class="pd-thumbs" id="pd-thumbs"></div>
+      </div>
+      <div class="pd-info">
+        <h1 id="pd-name"></h1>
+        <div class="product-rating" id="pd-rating"></div>
+        <span class="discount-badge" id="pd-discount-badge"></span>
+        <div class="pd-price-row">
+          <span class="price-current" id="pd-price-current"></span>
+          <span class="price-original" id="pd-price-original"></span>
+        </div>
+        <div><span class="stock-badge" id="pd-stock"></span></div>
+        <p id="pd-description"></p>
+
+        <div class="qty-selector">
+          <button type="button" id="qty-decrease" aria-label="Decrease quantity">−</button>
+          <span id="qty-value">1</span>
+          <button type="button" id="qty-increase" aria-label="Increase quantity">+</button>
+        </div>
+
+        <div class="pd-actions">
+          <button class="btn btn-primary btn-lg" id="pd-add-cart-btn">Add to Cart</button>
+          <button class="btn btn-dark btn-lg" id="pd-buy-now-btn">Buy Now</button>
+          <button class="btn btn-outline btn-lg" id="pd-wishlist-btn">🤍 Add to Wishlist</button>
+        </div>
+
+        <div class="pd-tabs">
+          <button class="pd-tab-btn active" data-tab="specs">Specifications</button>
+          <button class="pd-tab-btn" data-tab="reviews">Reviews</button>
+        </div>
+        <div class="pd-tab-panel active" id="tab-specs">
+          <table class="specs-table"><tbody id="pd-specs"></tbody></table>
+        </div>
+        <div class="pd-tab-panel" id="tab-reviews">
+          <div id="pd-reviews"></div>
+        </div>
+      </div>
+    </div>
+
+    <section style="margin-top:60px;">
+      <div class="section-head">
+        <div><span class="eyebrow">You Might Also Like</span><h2>Related Products</h2></div>
+      </div>
+      <div class="product-row" id="related-products"></div>
+    </section>
+
+    <section id="recently-viewed-section" style="margin-top:60px;" hidden>
+      <div class="section-head">
+        <div><span class="eyebrow">Your History</span><h2>Recently Viewed</h2></div>
+      </div>
+      <div class="product-row" id="recently-viewed"></div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <span class="footer-logo">Shop<span>Sphere</span></span>
+        <p>Your one-stop destination for electronics, fashion, and everything in between — at prices that make sense.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html?category=electronics">Electronics</a></li>
+          <li><a href="products.html?category=fashion">Fashion</a></li>
+          <li><a href="products.html?category=shoes">Shoes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="orders.html">My Orders</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ShopSphere. Built for learning purposes — a BTech portfolio project.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/app.js"></script>
+<script src="js/product-details.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".pd-tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".pd-tab-btn").forEach(b => b.classList.remove("active"));
+        document.querySelectorAll(".pd-tab-panel").forEach(p => p.classList.remove("active"));
+        btn.classList.add("active");
+        document.getElementById("tab-" + btn.dataset.tab).classList.add("active");
+      });
+    });
+  });
+</script>
+</body>
+</html>

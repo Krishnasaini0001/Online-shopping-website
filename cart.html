@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart — ShopSphere</title>
+<meta name="description" content="Review the items in your ShopSphere shopping cart, update quantities and proceed to checkout.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="cart">
+
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="navbar-logo">Shop<span>Sphere</span></a>
+    <form class="navbar-search-form" id="navbar-search-form" role="search">
+      <input type="text" placeholder="Search products..." aria-label="Search products">
+      <button type="submit" aria-label="Search">🔍</button>
+    </form>
+    <nav class="navbar-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="orders.html">My Orders</a>
+    </nav>
+    <div class="navbar-actions">
+      <button data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <a href="wishlist.html" class="navbar-icon-link" aria-label="Wishlist">♡<span class="navbar-badge" data-wishlist-count>0</span></a>
+      <a href="cart.html" class="navbar-icon-link" aria-label="Cart">🛒<span class="navbar-badge" data-cart-count>0</span></a>
+      <span data-auth-slot></span>
+    </div>
+    <button class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="page-title-bar">
+  <div class="container">
+    <span class="breadcrumb"><a href="index.html">Home</a> / Cart</span>
+    <h1>Your Shopping Cart</h1>
+  </div>
+</div>
+
+<main class="section" style="padding-top:32px;">
+  <div class="container">
+    <div class="cart-layout">
+      <div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="empty-state" id="cart-empty" hidden>
+          <span class="empty-icon">🛒</span>
+          <h2>Your cart is empty</h2>
+          <p>Looks like you haven't added anything yet. Start exploring our products.</p>
+          <a class="btn btn-primary" href="products.html">Browse Products</a>
+        </div>
+        <div style="margin-top:18px;">
+          <button class="btn btn-outline" id="clear-cart-btn">Clear Cart</button>
+        </div>
+      </div>
+      <aside class="summary-card" id="cart-summary">
+        <h3>Order Summary</h3>
+        <div class="summary-row"><span>Total Items</span><span id="summary-total-items">0</span></div>
+        <div class="summary-row"><span>Subtotal</span><span id="summary-subtotal">₹0</span></div>
+        <div class="summary-row"><span>Discount</span><span id="summary-discount">-₹0</span></div>
+        <div class="summary-row"><span>Delivery Charge</span><span id="summary-delivery">₹0</span></div>
+        <div class="summary-row total"><span>Total</span><span id="summary-total">₹0</span></div>
+        <a href="checkout.html" class="btn btn-primary btn-block" style="margin-top:16px;">Proceed to Checkout</a>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <span class="footer-logo">Shop<span>Sphere</span></span>
+        <p>Your one-stop destination for electronics, fashion, and everything in between — at prices that make sense.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html?category=electronics">Electronics</a></li>
+          <li><a href="products.html?category=fashion">Fashion</a></li>
+          <li><a href="products.html?category=shoes">Shoes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="orders.html">My Orders</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ShopSphere. Built for learning purposes — a BTech portfolio project.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/app.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Orders — ShopSphere</title>
+<meta name="description" content="View your ShopSphere order history and track delivery status.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="orders">
+
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="navbar-logo">Shop<span>Sphere</span></a>
+    <form class="navbar-search-form" id="navbar-search-form" role="search">
+      <input type="text" placeholder="Search products..." aria-label="Search products">
+      <button type="submit" aria-label="Search">🔍</button>
+    </form>
+    <nav class="navbar-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="orders.html">My Orders</a>
+    </nav>
+    <div class="navbar-actions">
+      <button data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <a href="wishlist.html" class="navbar-icon-link" aria-label="Wishlist">♡<span class="navbar-badge" data-wishlist-count>0</span></a>
+      <a href="cart.html" class="navbar-icon-link" aria-label="Cart">🛒<span class="navbar-badge" data-cart-count>0</span></a>
+      <span data-auth-slot></span>
+    </div>
+    <button class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="page-title-bar">
+  <div class="container">
+    <span class="breadcrumb"><a href="index.html">Home</a> / My Orders</span>
+    <h1>My Orders</h1>
+  </div>
+</div>
+
+<main class="section" style="padding-top:32px;">
+  <div class="container" style="max-width:760px;">
+    <div id="orders-list"></div>
+    <div class="empty-state" id="orders-empty" hidden>
+      <span class="empty-icon">📦</span>
+      <h2>No orders yet</h2>
+      <p>When you place an order, it will show up here so you can track it.</p>
+      <a class="btn btn-primary" href="products.html">Start Shopping</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 ShopSphere. Built for learning purposes — a BTech portfolio project.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/app.js"></script>
+<script src="js/orders.js"></script>
+</body>
+</html>

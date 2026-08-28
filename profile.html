@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Profile — ShopSphere</title>
+<meta name="description" content="View and edit your ShopSphere profile information.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="profile">
+
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="navbar-logo">Shop<span>Sphere</span></a>
+    <form class="navbar-search-form" id="navbar-search-form" role="search">
+      <input type="text" placeholder="Search products..." aria-label="Search products">
+      <button type="submit" aria-label="Search">🔍</button>
+    </form>
+    <nav class="navbar-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="orders.html">My Orders</a>
+    </nav>
+    <div class="navbar-actions">
+      <button data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <a href="wishlist.html" class="navbar-icon-link" aria-label="Wishlist">♡<span class="navbar-badge" data-wishlist-count>0</span></a>
+      <a href="cart.html" class="navbar-icon-link" aria-label="Cart">🛒<span class="navbar-badge" data-cart-count>0</span></a>
+      <span data-auth-slot></span>
+    </div>
+    <button class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="page-title-bar">
+  <div class="container">
+    <span class="breadcrumb"><a href="index.html">Home</a> / Profile</span>
+    <h1>My Profile</h1>
+  </div>
+</div>
+
+<main class="section" style="padding-top:32px;">
+  <div class="container" id="profile-root">
+    <div class="profile-layout">
+      <div class="profile-card">
+        <div class="profile-avatar" id="profile-avatar">S</div>
+        <h3 id="profile-display-name">ShopSphere Customer</h3>
+        <p id="profile-display-email" style="margin:0;"></p>
+        <div class="profile-stats">
+          <div class="profile-stat"><strong id="stat-orders">0</strong><span>Orders</span></div>
+          <div class="profile-stat"><strong id="stat-wishlist">0</strong><span>Wishlist</span></div>
+        </div>
+      </div>
+
+      <div class="profile-form-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <h3 style="margin:0;">Account Details</h3>
+          <button class="btn btn-outline btn-sm" id="edit-profile-btn" data-editing="false" type="button">Edit Profile</button>
+        </div>
+        <form id="profile-form">
+          <div class="form-grid">
+            <div class="form-group full">
+              <label for="profile-name">Full Name</label>
+              <input type="text" id="profile-name">
+            </div>
+            <div class="form-group">
+              <label for="profile-email">Email</label>
+              <input type="email" id="profile-email">
+            </div>
+            <div class="form-group">
+              <label for="profile-phone">Phone</label>
+              <input type="tel" id="profile-phone">
+            </div>
+            <div class="form-group full">
+              <label for="profile-address">Address</label>
+              <input type="text" id="profile-address">
+            </div>
+            <div class="form-group">
+              <label for="profile-city">City</label>
+              <input type="text" id="profile-city">
+            </div>
+            <div class="form-group">
+              <label for="profile-state">State</label>
+              <input type="text" id="profile-state">
+            </div>
+            <div class="form-group">
+              <label for="profile-pincode">Pincode</label>
+              <input type="text" id="profile-pincode">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 ShopSphere. Built for learning purposes — a BTech portfolio project.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/app.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>

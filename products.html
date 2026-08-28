@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Products — ShopSphere</title>
+<meta name="description" content="Browse, search, filter and sort ShopSphere's full catalog of electronics, fashion, shoes, accessories, home & living, beauty, sports and books.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="products">
+
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="navbar-logo">Shop<span>Sphere</span></a>
+    <form class="navbar-search-form" id="navbar-search-form" role="search">
+      <input type="text" placeholder="Search products..." aria-label="Search products">
+      <button type="submit" aria-label="Search">🔍</button>
+    </form>
+    <nav class="navbar-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="orders.html">My Orders</a>
+    </nav>
+    <div class="navbar-actions">
+      <button data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <a href="wishlist.html" class="navbar-icon-link" aria-label="Wishlist">♡<span class="navbar-badge" data-wishlist-count>0</span></a>
+      <a href="cart.html" class="navbar-icon-link" aria-label="Cart">🛒<span class="navbar-badge" data-cart-count>0</span></a>
+      <span data-auth-slot></span>
+    </div>
+    <button class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="page-title-bar">
+  <div class="container">
+    <span class="breadcrumb"><a href="index.html">Home</a> / Products</span>
+    <h1>All Products</h1>
+  </div>
+</div>
+
+<main class="section" style="padding-top:32px;">
+  <div class="container">
+    <button class="btn btn-outline filters-toggle" id="filters-toggle">☰ Filters</button>
+    <div class="listing-layout">
+      <aside class="filters-panel" id="filters-panel">
+        <h3>Filters</h3>
+        <form id="filters-form">
+          <div class="filter-group">
+            <label for="search-input">Search</label>
+            <input type="text" id="search-input" placeholder="Search by name, category...">
+          </div>
+          <div class="filter-group">
+            <label for="filter-category">Category</label>
+            <select id="filter-category">
+              <option value="">All Categories</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Price Range (₹)</label>
+            <div class="filter-range">
+              <input type="number" id="filter-min-price" placeholder="Min" min="0">
+              <input type="number" id="filter-max-price" placeholder="Max" min="0">
+            </div>
+          </div>
+          <div class="filter-group">
+            <label for="filter-rating">Minimum Rating</label>
+            <select id="filter-rating">
+              <option value="">Any Rating</option>
+              <option value="4.5">4.5 & up</option>
+              <option value="4">4.0 & up</option>
+              <option value="3.5">3.5 & up</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-discount">Minimum Discount</label>
+            <select id="filter-discount">
+              <option value="">Any Discount</option>
+              <option value="10">10% & up</option>
+              <option value="20">20% & up</option>
+              <option value="30">30% & up</option>
+              <option value="40">40% & up</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-availability">Availability</label>
+            <select id="filter-availability">
+              <option value="">All</option>
+              <option value="in-stock">In Stock</option>
+              <option value="out-of-stock">Out of Stock</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-outline btn-block" id="clear-filters-btn">Clear Filters</button>
+        </form>
+      </aside>
+
+      <div class="listing-content">
+        <div class="listing-toolbar">
+          <span class="results-count" id="results-count">0 products found</span>
+          <div class="sort-wrapper">
+            <label for="sort-select">Sort by</label>
+            <select id="sort-select">
+              <option value="default">Default</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Rating</option>
+              <option value="newest">Newest</option>
+              <option value="discount">Highest Discount</option>
+              <option value="popular">Most Popular</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="products-grid" id="products-grid"></div>
+
+        <div class="empty-state" id="no-results" hidden>
+          <span class="empty-icon">🔍</span>
+          <h2>No products found</h2>
+          <p>Try adjusting your search or filters to find what you're looking for.</p>
+          <button class="btn btn-primary" onclick="document.getElementById('clear-filters-btn').click()">Clear Filters</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <span class="footer-logo">Shop<span>Sphere</span></span>
+        <p>Your one-stop destination for electronics, fashion, and everything in between — at prices that make sense.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html?category=electronics">Electronics</a></li>
+          <li><a href="products.html?category=fashion">Fashion</a></li>
+          <li><a href="products.html?category=shoes">Shoes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="orders.html">My Orders</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ShopSphere. Built for learning purposes — a BTech portfolio project.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/app.js"></script>
+<script src="js/products.js"></script>
+</body>
+</html>

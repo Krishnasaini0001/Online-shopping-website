@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — ShopSphere</title>
+<meta name="description" content="Complete your ShopSphere order — enter shipping details and choose a payment method.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="checkout">
+
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="navbar-logo">Shop<span>Sphere</span></a>
+    <form class="navbar-search-form" id="navbar-search-form" role="search">
+      <input type="text" placeholder="Search products..." aria-label="Search products">
+      <button type="submit" aria-label="Search">🔍</button>
+    </form>
+    <nav class="navbar-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="orders.html">My Orders</a>
+    </nav>
+    <div class="navbar-actions">
+      <button data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <a href="wishlist.html" class="navbar-icon-link" aria-label="Wishlist">♡<span class="navbar-badge" data-wishlist-count>0</span></a>
+      <a href="cart.html" class="navbar-icon-link" aria-label="Cart">🛒<span class="navbar-badge" data-cart-count>0</span></a>
+      <span data-auth-slot></span>
+    </div>
+    <button class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="page-title-bar">
+  <div class="container">
+    <span class="breadcrumb"><a href="index.html">Home</a> / <a href="cart.html">Cart</a> / Checkout</span>
+    <h1>Checkout</h1>
+  </div>
+</div>
+
+<main class="section" style="padding-top:32px;">
+  <div class="container" id="checkout-root">
+    <form id="checkout-form" novalidate>
+      <div class="checkout-layout">
+        <div>
+          <div class="checkout-section">
+            <h3>Customer Information</h3>
+            <div class="form-grid">
+              <div class="form-group full">
+                <label for="checkout-name">Full Name</label>
+                <input type="text" id="checkout-name" required>
+              </div>
+              <div class="form-group">
+                <label for="checkout-email">Email</label>
+                <input type="email" id="checkout-email" required>
+              </div>
+              <div class="form-group">
+                <label for="checkout-phone">Phone Number</label>
+                <input type="tel" id="checkout-phone" placeholder="10-digit number" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout-section">
+            <h3>Shipping Address</h3>
+            <div class="form-grid">
+              <div class="form-group full">
+                <label for="checkout-address">Address</label>
+                <input type="text" id="checkout-address" required>
+              </div>
+              <div class="form-group">
+                <label for="checkout-city">City</label>
+                <input type="text" id="checkout-city" required>
+              </div>
+              <div class="form-group">
+                <label for="checkout-state">State</label>
+                <input type="text" id="checkout-state" required>
+              </div>
+              <div class="form-group">
+                <label for="checkout-pincode">Pincode</label>
+                <input type="text" id="checkout-pincode" placeholder="6-digit pincode" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout-section">
+            <h3>Payment Method</h3>
+            <div class="payment-options">
+              <label class="payment-option selected">
+                <input type="radio" name="payment-method" value="Cash on Delivery" checked>
+                <div><strong>Cash on Delivery</strong><div style="font-size:0.82rem;color:var(--color-text-muted);">Pay when your order arrives</div></div>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment-method" value="Card">
+                <div><strong>Credit / Debit Card</strong><div style="font-size:0.82rem;color:var(--color-text-muted);">Simulated — no real payment processed</div></div>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment-method" value="UPI">
+                <div><strong>UPI</strong><div style="font-size:0.82rem;color:var(--color-text-muted);">Simulated — no real payment processed</div></div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <aside class="summary-card">
+          <h3>Order Summary</h3>
+          <div id="checkout-items"></div>
+          <div class="summary-row"><span>Subtotal</span><span id="checkout-subtotal">₹0</span></div>
+          <div class="summary-row"><span>Discount</span><span id="checkout-discount">-₹0</span></div>
+          <div class="summary-row"><span>Delivery Charge</span><span id="checkout-delivery">₹0</span></div>
+          <div class="summary-row total"><span>Total</span><span id="checkout-total">₹0</span></div>
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top:16px;">Place Order</button>
+        </aside>
+      </div>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 ShopSphere. Built for learning purposes — a BTech portfolio project.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/app.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

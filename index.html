@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopSphere — Shop Electronics, Fashion, Shoes & More Online</title>
+<meta name="description" content="ShopSphere is a modern e-commerce store for electronics, fashion, shoes, accessories, home & living, beauty, sports and books at great prices.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="home">
+
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="navbar-logo">Shop<span>Sphere</span></a>
+    <form class="navbar-search-form" id="navbar-search-form" role="search">
+      <input type="text" placeholder="Search products..." aria-label="Search products">
+      <button type="submit" aria-label="Search">🔍</button>
+    </form>
+    <nav class="navbar-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="orders.html">My Orders</a>
+    </nav>
+    <div class="navbar-actions">
+      <button data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+      <a href="wishlist.html" class="navbar-icon-link" aria-label="Wishlist">♡<span class="navbar-badge" data-wishlist-count>0</span></a>
+      <a href="cart.html" class="navbar-icon-link" aria-label="Cart">🛒<span class="navbar-badge" data-cart-count>0</span></a>
+      <span data-auth-slot></span>
+    </div>
+    <button class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-copy">
+        <span class="hero-eyebrow">New Season Arrivals</span>
+        <h1>Everything you need,<br><em>shipped to your door.</em></h1>
+        <p>Discover 35+ handpicked products across electronics, fashion, shoes, home & living, beauty, sports and books — all in one sphere.</p>
+        <div class="hero-actions">
+          <a href="products.html" class="btn btn-primary btn-lg">Shop Now</a>
+          <a href="#categories" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.4);">Explore Products</a>
+        </div>
+      </div>
+      <div class="hero-stack" aria-hidden="true">
+        <span class="hero-badge-float">Up to 40% OFF</span>
+        <div class="hero-card hero-card-3">
+          <img src="https://picsum.photos/seed/hero-c/300/200" alt="">
+          <div class="hc-name">Ridgeline Hiking Boots</div>
+          <div class="hc-price">₹4,499</div>
+        </div>
+        <div class="hero-card hero-card-1">
+          <img src="https://picsum.photos/seed/hero-a/300/200" alt="">
+          <div class="hc-name">Aeris Wireless Headphones</div>
+          <div class="hc-price">₹3,299</div>
+        </div>
+        <div class="hero-card hero-card-2">
+          <img src="https://picsum.photos/seed/hero-b/300/200" alt="">
+          <div class="hc-name">Pulse Smartwatch</div>
+          <div class="hc-price">₹5,999</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Browse</span>
+          <h2>Shop by Category</h2>
+        </div>
+      </div>
+      <div class="category-grid" id="category-grid"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Handpicked</span>
+          <h2>Featured Products</h2>
+        </div>
+        <a href="products.html" class="section-link">View All →</a>
+      </div>
+      <div class="product-row" id="featured-products"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Special Offers</span>
+          <h2>This Week's Deals</h2>
+        </div>
+      </div>
+      <div class="offers-band">
+        <a class="offer-card offer-1" href="products.html?category=electronics">
+          <h3>Electronics Sale</h3>
+          <p>Save up to 35% on headphones, cameras & more</p>
+        </a>
+        <a class="offer-card offer-2" href="products.html?discount=30">
+          <h3>Deals Above 30% Off</h3>
+          <p>Handpicked discounts across every category</p>
+        </a>
+        <a class="offer-card offer-3" href="products.html?category=fashion">
+          <h3>Fashion Refresh</h3>
+          <p>New arrivals in jackets, dresses & shirts</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Trending Now</span>
+          <h2>Most Popular</h2>
+        </div>
+        <a href="products.html" class="section-link">View All →</a>
+      </div>
+      <div class="product-row" id="trending-products"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Testimonials</span>
+          <h2>What Our Customers Say</h2>
+        </div>
+      </div>
+      <div class="testimonial-grid" id="testimonial-grid"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="newsletter">
+        <div>
+          <h2>Get 10% off your first order</h2>
+          <p>Subscribe to our newsletter for deals, new arrivals and restock alerts.</p>
+        </div>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="Enter your email" aria-label="Email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <span class="footer-logo">Shop<span>Sphere</span></span>
+        <p>Your one-stop destination for electronics, fashion, and everything in between — at prices that make sense.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html?category=electronics">Electronics</a></li>
+          <li><a href="products.html?category=fashion">Fashion</a></li>
+          <li><a href="products.html?category=shoes">Shoes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="orders.html">My Orders</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ShopSphere. Built for learning purposes — a BTech portfolio project.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
