@@ -1,3 +1,4 @@
+
 # 🛍️ ShopSphere — Modern E-Commerce Website
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -196,3 +197,6 @@ Built as a placement/portfolio project.
 ## 📄 License
 
 This project is open source and available under the [MIT License](https://opensource.org/licenses/MIT).
+=======
+# Online-shopping-website
+>>>>>>> 8d652e2f22c09fb019c69ce50202952753880216
