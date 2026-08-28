@@ -190,13 +190,4 @@ All reads/writes go through a small `Storage` wrapper in `js/utils.js` with try/
 Built as a placement/portfolio project.
 
 **Your Name**
-[GitHub](https://github.com/<your-username>) · [LinkedIn](https://linkedin.com/in/<your-profile>)
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](https://opensource.org/licenses/MIT).
-=======
-# Online-shopping-website
->>>>>>> 8d652e2f22c09fb019c69ce50202952753880216
+[GitHub](https://github.com/Krishnasaini0001>) · [LinkedIn](https://linkedin.com/in/https://www.linkedin.com/in/krishna-saini-b07a2b294/)
