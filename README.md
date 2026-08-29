@@ -107,7 +107,7 @@ No build tools or package installation required.
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/<your-username>/shop-sphere.git
+   git clone https://github.com/Krishnasaini0001/shop-sphere.git
    cd shop-sphere
    ```
 2. **Open it in a browser**
@@ -190,4 +190,4 @@ All reads/writes go through a small `Storage` wrapper in `js/utils.js` with try/
 Built as a placement/portfolio project.
 
 **Your Name**
-[GitHub](https://github.com/Krishnasaini0001>) · [LinkedIn](https://linkedin.com/in/https://www.linkedin.com/in/krishna-saini-b07a2b294/)
+[GitHub](https://github.com/Krishnasaini0001) · [LinkedIn](https://linkedin.com/in/https://www.linkedin.com/in/krishna-saini-b07a2b294/)
