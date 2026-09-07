@@ -189,5 +189,5 @@ All reads/writes go through a small `Storage` wrapper in `js/utils.js` with try/
 
 Built as a placement/portfolio project.
 
-**Your Name**
+**Krishna Saini**
 [GitHub](https://github.com/Krishnasaini0001) · [LinkedIn](https://linkedin.com/in/https://www.linkedin.com/in/krishna-saini-b07a2b294/)
