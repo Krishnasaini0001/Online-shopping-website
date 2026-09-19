@@ -90,7 +90,7 @@ A complete, fully functional e-commerce website front end built with **only HTML
 
 ## 🏗️ Architecture
 
-mermaid
+```mermaid
 flowchart LR
     A[Browser] -->|HTTP requests| B(Flask App Factory)
     B --> C{Blueprints}
@@ -103,7 +103,7 @@ flowchart LR
     I --> J[base.html]
     J --> K[navbar / footer partials]
     J --> L[page content blocks]
-
+```
 
 <br>
 
