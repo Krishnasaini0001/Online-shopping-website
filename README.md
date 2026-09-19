@@ -1,7 +1,7 @@
 
 # 🛍️ ShopSphere — Modern E-Commerce Website
 
-<div align="center">
+< div align="center" >
 
 ```
  ███████╗ ██████╗  ██████╗ ██████╗ ███████╗██╗  ██╗██████╗ ██████╗ ███████╗███████╗███████╗
