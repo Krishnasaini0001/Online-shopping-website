@@ -45,15 +45,67 @@ A complete, fully functional e-commerce website front end built with **only HTML
 
 ## 🛠️ Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Structure | HTML5 (semantic elements, ARIA labels) |
-| Styling | CSS3 (custom properties, Grid, Flexbox, media queries) |
-| Behavior | Vanilla JavaScript (ES6+, modular files) |
-| Persistence | Browser `localStorage` |
-| Fonts | Google Fonts (Space Grotesk + Inter) |
+<table>
+<tr>
+<td valign="top" width="25%">
 
-No frameworks, no npm dependencies, no build step required.
+*🎨 Frontend*
+- HTML5 / CSS3
+- Vanilla JavaScript
+- Custom design system
+- Font Awesome icons
+- Google Fonts (Poppins/Inter)
+
+</td>
+<td valign="top" width="25%">
+
+*⚙️ Backend*
+- Python 3.10+
+- Flask (App Factory)
+- Flask-SQLAlchemy
+- Werkzeug security
+- python-dotenv
+
+</td>
+<td valign="top" width="25%">
+
+*🗄️ Database*
+- SQLite
+- SQLAlchemy ORM
+- Flask-Migrate (planned)
+
+</td>
+<td valign="top" width="25%">
+
+*🧪 Tooling*
+- pytest (planned)
+- Git & GitHub
+- Chart.js (planned)
+
+</td>
+</tr>
+</table>
+
+<br>
+
+## 🏗️ Architecture
+
+mermaid
+flowchart LR
+    A[Browser] -->|HTTP requests| B(Flask App Factory)
+    B --> C{Blueprints}
+    C --> D[main — public pages]
+    C --> E[auth — planned]
+    C --> F[cart / orders — planned]
+    C --> G[admin — planned]
+    D & E & F & G --> H[(SQLite via SQLAlchemy)]
+    B --> I[Jinja2 Templates]
+    I --> J[base.html]
+    J --> K[navbar / footer partials]
+    J --> L[page content blocks]
+
+
+<br>
 
 ---
 
