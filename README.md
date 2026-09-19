@@ -22,15 +22,6 @@
 A complete, fully functional e-commerce website front end built with **only HTML5, CSS3, and vanilla JavaScript** — no React, no Bootstrap, no jQuery, no build tools. Built as a placement/portfolio project to demonstrate real-world front-end engineering skills: DOM manipulation, state management via `localStorage`, dynamic rendering, and responsive UI design.
 
 ---
-
-## 🔗 Live Demo
-
-> Open `index.html` in your browser, or deploy the folder to GitHub Pages / Netlify / Vercel for a live link. (Add your deployed URL here once published.)
-
-## 📸 Screenshots
-
-> Add screenshots of the homepage, product listing, product details, cart, and checkout pages to `assets/screenshots/` and reference them here, e.g.:
->
 > `![Homepage](assets/screenshots/home.png)`
 
 ---
